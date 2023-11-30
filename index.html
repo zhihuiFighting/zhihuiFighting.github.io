@@ -74,7 +74,7 @@
             void floatingElement.offsetWidth;
       
             // 将元素向上移动
-            floatingElement.style.transform = 'translate(-50%, -300px)';
+            floatingElement.style.transform = 'translate(-50%, -200px)';
       
             // 在一段时间后移除元素
             setTimeout(function() {
@@ -89,8 +89,8 @@
             <style>
               #play-button {
                 position: absolute;
-                top: 200px;
-                left: 2000px;
+                top: 50px;
+                left: 200px;
                 width: 100px;
                 height: 100px;
                 cursor: pointer;
@@ -98,7 +98,7 @@
             </style>
           </head>
           <body>
-            <img id="play-button" src="https://pic3.zhimg.com/80/v2-baad868f568367692bd219720eceda46_720w.webp"  onclick="toggleMusic()">
+            <img id="play-button" src="https://pic3.zhimg.com/100/v2-baad868f568367692bd219720eceda46_r.jpeg"  onclick="toggleMusic()">
             <audio id="background-music" loop>
               <source src="https://music.163.com/song/media/outer/url?id=1330348068.mp3" type="audio/mpeg">
             </audio>
@@ -110,10 +110,10 @@
               function toggleMusic() {
                 if (backgroundMusic.paused) {
                   backgroundMusic.play();
-                  playButton.src = 'https://pic3.zhimg.com/80/v2-baad868f568367692bd219720eceda46_720w.webp';
+                  playButton.src = 'https://pic3.zhimg.com/100/v2-baad868f568367692bd219720eceda46_r.jpeg';
                 } else {
                   backgroundMusic.pause();
-                  playButton.src = 'https://pic3.zhimg.com/80/v2-baad868f568367692bd219720eceda46_720w.webp';    
+                  playButton.src = 'https://pic3.zhimg.com/100/v2-baad868f568367692bd219720eceda46_r.jpeg';    
                 }
               }
             </script>
