@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+    body {
+         background-image: url("https://pic3.zhimg.com/v2-4501191a827a84af82683fb0213a0512_r.jpg"); 
+        background-size: cover;
+    }
+</style>
+<style>
+    /* 居中文本的样式 */
+    .centered-text {
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 15vh; /* 设置一个高度，使内容垂直居中 */
+    }
+</style>
+<style>
+    /* 修改行间距的样式 */
+    .head-line {
+        line-height: 1; /* 设置行间距为1.5倍行高 */
+        font-size: 45px; /* 设置字体大小为30像素 */
+    }
+</style>
+<style>
+    /* 修改行间距的样式 */
+    .custom-line {
+        line-height: 2; /* 设置行间距为1.5倍行高 */
+        font-size: 30px; /* 设置字体大小为30像素 */ 
+    }
+</style>
+
+<!-- </head>
+<body>
+     <div class="centered-text">
+        <h1 class="head-line">狒狒加油!</h1>
+    </div> 
+    <div class="centered-text">
+        <p class="custom-line">你是最棒的 <br>你一定能考上<br>一点也不比别人笨塞<br>我相信你呦</p>
+    </div>
+<body>  -->   
+
+    <head>
+        <style>
+          .floating-element {
+            position: fixed;
+            bottom: -100px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: #ff006ade;
+            color: #ffffff;
+            padding: 10px;
+            border-radius: 5px;
+            transition: transform 0.5s ease-out;
+          }
+        </style>
+      </head>
+      <body>
+        <script>
+          document.addEventListener('click', function(event) {
+            var floatingElement = document.createElement('div');
+            floatingElement.classList.add('floating-element');
+            floatingElement.textContent = '我一定可以';
+      
+            document.body.appendChild(floatingElement);
+      
+            // 设置元素初始位置
+            floatingElement.style.left = event.clientX + 'px';
+            floatingElement.style.bottom = window.innerHeight - event.clientY + 'px';
+      
+            // 强制浏览器重新渲染，以触发动画效果
+            void floatingElement.offsetWidth;
+      
+            // 将元素向上移动
+            floatingElement.style.transform = 'translate(-50%, -300px)';
+      
+            // 在一段时间后移除元素
+            setTimeout(function() {
+              floatingElement.remove();
+            }, 800);
+          });
+        </script>
+      </body>
+
+      <head>
+        <head>
+            <style>
+              #play-button {
+                position: absolute;
+                top: 200px;
+                left: 2000px;
+                width: 100px;
+                height: 100px;
+                cursor: pointer;
+              }
+            </style>
+          </head>
+          <body>
+            <img id="play-button" src="https://pic3.zhimg.com/80/v2-baad868f568367692bd219720eceda46_720w.webp"  onclick="toggleMusic()">
+            <audio id="background-music" loop>
+              <source src="https://music.163.com/song/media/outer/url?id=1330348068.mp3" type="audio/mpeg">
+            </audio>
+          
+            <script>
+              var backgroundMusic = document.getElementById('background-music');
+              var playButton = document.getElementById('play-button');
+          
+              function toggleMusic() {
+                if (backgroundMusic.paused) {
+                  backgroundMusic.play();
+                  playButton.src = 'https://pic3.zhimg.com/80/v2-baad868f568367692bd219720eceda46_720w.webp';
+                } else {
+                  backgroundMusic.pause();
+                  playButton.src = 'https://pic3.zhimg.com/80/v2-baad868f568367692bd219720eceda46_720w.webp';    
+                }
+              }
+            </script>
+          </body>
+</html>
